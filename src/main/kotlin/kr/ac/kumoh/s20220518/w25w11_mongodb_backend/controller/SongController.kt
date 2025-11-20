@@ -2,6 +2,7 @@ package kr.ac.kumoh.s20220518.w25w11_mongodb_backend.controller
 
 import kr.ac.kumoh.s20220518.w25w11_mongodb_backend.model.Song
 import kr.ac.kumoh.s20220518.w25w11_mongodb_backend.service.SongService
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/songs")
+@CrossOrigin(origins = ["http://localhost:5173"])
 class SongController(
     private val service: SongService
 ) {
