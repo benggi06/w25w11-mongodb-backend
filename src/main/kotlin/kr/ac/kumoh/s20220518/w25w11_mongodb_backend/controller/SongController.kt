@@ -2,22 +2,13 @@ package kr.ac.kumoh.s20220518.w25w11_mongodb_backend.controller
 
 import kr.ac.kumoh.s20220518.w25w11_mongodb_backend.model.Song
 import kr.ac.kumoh.s20220518.w25w11_mongodb_backend.service.SongService
-import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.CrossOrigin
-import org.springframework.web.bind.annotation.DeleteMapping
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import java.net.URI
 
 @RestController
 @RequestMapping("/api/songs")
-@CrossOrigin(origins = ["http://localhost:5173"])
+@CrossOrigin(origins = ["http://localhost:5173","https://benggi06.github.io",])
 class SongController(
     private val service: SongService
 ) {
